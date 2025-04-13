@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #006400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+            <h1 class="mt-5" style="color: white;">Расписание 6-24</h1>
+        </center>
+        <center>
+            <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th style="color: white;">day</th>
+                    <th style="color: white;">lesson 1</th>
+                    <th style="color: white;">lesson 2</th>
+                    <th style="color: white;">lesson 3</th>
+                    <th style="color: white;">lesson 4</th>
+                    <th style="color: white;">lesson 5</th>
+                    <th style="color: white;">lesson 6</th>
+                    <th style="color: white;">lesson 7</th>
+                    <th style="color: white;">lesson 8</th>
+                    <th style="color: white;">lesson 9</th>
+                    <!-- Добавьте дополнительные заголовки по мере необходимости -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in schedule %}
+                <tr>
+                    <td style="color: white;">{{ row['day'] }}</td>
+                    <td style="color: white;">{{ row['lesson 1'] }}</td>
+                    <td style="color: white;">{{ row['lesson 2'] }}</td>
+                    <td style="color: white;">{{ row['lesson 3'] }}</td>
+                    <td style="color: white;">{{ row['lesson 4'] }}</td>
+                    <td style="color: white;">{{ row['lesson 5'] }}</td>
+                    <td style="color: white;">{{ row['lesson 6'] }}</td>
+                    <td style="color: white;">{{ row['lesson 7'] }}</td>
+                    <td style="color: white;">{{ row['lesson 8'] }}</td>
+                    <td style="color: white;">{{ row['lesson 9'] }}</td>
+                    <!-- Добавьте дополнительные ячейки по мере необходимости -->
+                </tr>
+                {% endfor %}
+
+            </tbody>
+            </table>
+        </center>
+
+    </div>
+</body>
+</html>
